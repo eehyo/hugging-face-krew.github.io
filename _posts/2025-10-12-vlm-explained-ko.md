@@ -164,9 +164,12 @@ args, training_args = parser.parse_args_and_config()
 
 인스트럭션 파인튜닝을 위해 대화 템플릿을 초기화합니다.
 
+{% raw %}
 ```bash
 LLAVA_CHAT_TEMPLATE = """A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. {% for message in messages %}{% if message['role'] == 'user' %}USER: {% else %}ASSISTANT: {% endif %}{% for item in message['content'] %}{% if item['type'] == 'text' %}{{ item['text'] }}{% elif item['type'] == 'image' %}<image>{% endif %}{% endfor %}{% if message['role'] == 'user' %} {% else %}{{eos_token}}{% endif %}{% endfor %}"""
 ```
+{% endraw %}
+
 
 이제 모델과 토크나이저를 초기화합니다.
 
