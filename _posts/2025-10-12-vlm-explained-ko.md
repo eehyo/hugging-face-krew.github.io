@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "비전 언어 모델 쉽게 이해하기"
-author: Woojun
+author: woojun
 categories: [Multimodal]
 image: assets/images/blog/posts/2025-10-12-vlm-explained-ko/thumbnail.png
 ---
@@ -57,14 +57,14 @@ Hugging Face Hub에는 많은 오픈소스 비전 언어 모델이 있습니다.
 [Vision Arena](https://huggingface.co/spaces/WildVision/vision-arena)는 모델 출력에 대한 익명 투표만을 기반으로 하는 리더보드로, 지속적으로 업데이트됩니다. 이 아레나에서 사용자는 이미지와 프롬프트를 입력하면, 두 개의 서로 다른 모델의 출력이 무작위로 익명 제공되며, 사용자는 선호하는 출력을 선택할 수 있습니다. 이러한 과정을 통해 리더보드는 전적으로 인간의 선호도에 기반하여 구성됩니다.
 
 <p align="center">
- <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/blog/vlm/arena.png" alt="Vision Arena" style="width: 90%; height: auto;"><be>
+ <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/blog/vlm/arena.png" alt="Vision Arena" style="width: 90%; height: auto;"><br>
 <em>Vision Arena</em>
 </p>
 
 [Open VLM 리더보드](https://huggingface.co/spaces/opencompass/open_vlm_leaderboard)는 비전 언어 모델들이 다양한 평가 지표와 평균 점수에 따라 순위가 매겨지는 또 다른 리더보드입니다. 모델 크기, 오픈소스 여부에 따라 모델을 필터링하고, 다양한 평가 지표에 대한 순위를 확인할 수도 있습니다.
 
 <p align="center">
- <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/blog/vlm/leaderboard.png" alt="VLM Capabilities" style="width: 90%; height: auto;"><be>
+ <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/blog/vlm/leaderboard.png" alt="VLM Capabilities" style="width: 90%; height: auto;"><br>
 <em>Open VLM 리더보드</em>
 </p>
 
