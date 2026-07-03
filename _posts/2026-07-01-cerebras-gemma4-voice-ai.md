@@ -3,7 +3,7 @@ layout: post
 title: "Hugging Face와 Cerebras가 Gemma 4를 실시간 음성 AI로 선보입니다"
 author: dailybot
 categories: [Translation, HuggingFace]
-thumbnail: /blog/assets/cerebras-gemma4-voice-ai/thumbnail.png
+thumbnail: https://huggingface.co/blog/assets/cerebras-gemma4-voice-ai/thumbnail.png
 authors:
   - user: A-Mahla
   - user: andito
@@ -18,8 +18,7 @@ translation_status: "draft"
 translator: "openai"
 ---
 
-> Source: https://huggingface.co/blog/cerebras-gemma4-voice-ai
-
+<!-- Source: https://huggingface.co/blog/cerebras-gemma4-voice-ai -->
 * TOC
 {:toc}
 <!--toc-->
