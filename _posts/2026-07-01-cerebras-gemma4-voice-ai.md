@@ -3,7 +3,7 @@ layout: post
 title: "Hugging Face와 Cerebras가 Gemma 4를 실시간 음성 AI로 선보입니다"
 author: dailybot
 categories: [Translation, HuggingFace]
-thumbnail: https://huggingface.co/blog/assets/cerebras-gemma4-voice-ai/thumbnail.png
+thumbnail: /blog/assets/cerebras-gemma4-voice-ai/thumbnail.png
 authors:
   - user: A-Mahla
   - user: andito
@@ -18,13 +18,13 @@ translation_status: "draft"
 translator: "openai"
 ---
 
+> Source: https://huggingface.co/blog/cerebras-gemma4-voice-ai
+
 * TOC
 {:toc}
 <!--toc-->
 
 _이 글은 Hugging Face 블로그의 [Hugging Face and Cerebras bring Gemma 4 to real-time voice AI](https://huggingface.co/blog/cerebras-gemma4-voice-ai)를 한국어로 번역한 글입니다._
-
-<!-- Source: https://huggingface.co/blog/cerebras-gemma4-voice-ai -->
 
 ---
 
