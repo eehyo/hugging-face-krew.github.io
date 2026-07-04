@@ -1,0 +1,193 @@
+name: HF Agent Pre-Merge E2E 161
+
+on:
+  pull_request:
+    types: [synchronize]
+
+permissions:
+  contents: read
+
+jobs:
+  review:
+    name: HF Agent E2E / ${{ matrix.skill }}
+    if: ${{ github.event.pull_request.number == 161 }}
+    permissions:
+      contents: read
+    strategy:
+      fail-fast: false
+      matrix:
+        skill: [seo, quality]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout workflow tools
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          repository: Hugging-Face-KREW/hf-workflow
+          ref: 0d20d3c63617feca6ba293419657636ed34f3bc1
+          path: workflow
+
+      - name: Checkout exact candidate
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          path: target
+
+      - name: Set up Python
+        uses: actions/setup-python@42375524e23c412d93fb67b49958b491fce71c38
+        with:
+          python-version: "3.11"
+
+      - name: Install review dependencies
+        run: python -m pip install pyyaml
+
+      - name: Run existing review skill
+        working-directory: workflow
+        run: >-
+          python scripts/hf_agent/run_skill_review.py
+          --skill "${{ matrix.skill }}"
+          --file "_posts/2026-06-30-eee-community-evals.md"
+          --target-root ../target
+          --report "${{ runner.temp }}/${{ matrix.skill }}.md"
+          --result-json "${{ runner.temp }}/${{ matrix.skill }}.json"
+
+      - name: Upload review result
+        if: ${{ always() }}
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: hf-agent-e2e-${{ matrix.skill }}-${{ github.event.pull_request.head.sha }}
+          path: |
+            ${{ runner.temp }}/${{ matrix.skill }}.md
+            ${{ runner.temp }}/${{ matrix.skill }}.json
+
+  verifier:
+    name: HF Agent E2E / Independent Verifier
+    if: ${{ github.event.pull_request.number == 161 }}
+    needs: review
+    permissions:
+      contents: read
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout workflow tools
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          repository: Hugging-Face-KREW/hf-workflow
+          ref: 0d20d3c63617feca6ba293419657636ed34f3bc1
+          path: workflow
+
+      - name: Checkout exact candidate
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          path: target
+
+      - name: Set up Python
+        uses: actions/setup-python@42375524e23c412d93fb67b49958b491fce71c38
+        with:
+          python-version: "3.11"
+
+      - name: Install review dependencies
+        run: python -m pip install pyyaml
+
+      - name: Verify candidate independently
+        working-directory: workflow
+        run: |
+          for skill in seo quality; do
+            python scripts/hf_agent/run_skill_review.py \
+              --skill "$skill" \
+              --file "_posts/2026-06-30-eee-community-evals.md" \
+              --target-root ../target \
+              --report "${{ runner.temp }}/verify-$skill.md" \
+              --result-json "${{ runner.temp }}/verify-$skill.json"
+          done
+
+  review_threads:
+    name: HF Agent E2E / Review Threads
+    if: ${{ github.event.pull_request.number == 161 }}
+    permissions:
+      contents: read
+      pull-requests: read
+    runs-on: ubuntu-latest
+    outputs:
+      count: ${{ steps.threads.outputs.count }}
+    steps:
+      - name: Checkout workflow tools
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          repository: Hugging-Face-KREW/hf-workflow
+          ref: 0d20d3c63617feca6ba293419657636ed34f3bc1
+          path: workflow
+
+      - name: Count unresolved review threads
+        id: threads
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          PYTHONPATH: workflow/scripts
+        run: |
+          python -m hf_agent.review_threads \
+            --repository "${{ github.repository }}" \
+            --pr-number "${{ github.event.pull_request.number }}" \
+            --result-json "${{ runner.temp }}/threads.json"
+          count=$(jq -r .unresolved_threads "${{ runner.temp }}/threads.json")
+          echo "count=$count" >> "$GITHUB_OUTPUT"
+          test "$count" -eq 0
+
+  report:
+    name: HF Agent E2E / Publish Report
+    if: ${{ always() && github.event.pull_request.number == 161 }}
+    needs: [review, verifier, review_threads]
+    permissions:
+      actions: read
+      contents: read
+      pull-requests: write
+      statuses: write
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout workflow tools
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          repository: Hugging-Face-KREW/hf-workflow
+          ref: 0d20d3c63617feca6ba293419657636ed34f3bc1
+          path: workflow
+
+      - name: Download review results
+        uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+        with:
+          path: results
+
+      - name: Publish marker report
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          PYTHONPATH: workflow/scripts
+        run: >-
+          python -m hf_agent.publish_pr_comment
+          --results results
+          --repository "${{ github.repository }}"
+          --pr-number "${{ github.event.pull_request.number }}"
+          --head-sha "${{ github.event.pull_request.head.sha }}"
+
+      - name: Build reviewed snapshot
+        run: >-
+          jq -n
+          --arg head_sha "${{ github.event.pull_request.head.sha }}"
+          --arg feedback_revision "pre-merge-e2e"
+          --arg expected_head_sha "${{ github.event.pull_request.head.sha }}"
+          --arg expected_feedback_revision "pre-merge-e2e"
+          --argjson gates_passed "${{ needs.review.result == 'success' }}"
+          --argjson verifier_passed "${{ needs.verifier.result == 'success' }}"
+          --argjson unresolved_threads "${{ needs.review_threads.outputs.count || '1' }}"
+          '{head_sha: $head_sha, feedback_revision: $feedback_revision,
+          expected_head_sha: $expected_head_sha,
+          expected_feedback_revision: $expected_feedback_revision,
+          gates_passed: $gates_passed, verifier_passed: $verifier_passed,
+          report_published: true, unresolved_threads: $unresolved_threads}'
+          > "${{ runner.temp }}/snapshot.json"
+
+      - name: Publish lifecycle status
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          PYTHONPATH: workflow/scripts
+        run: >-
+          python -m hf_agent.finalize_pr
+          --snapshot "${{ runner.temp }}/snapshot.json"
+          --repository "${{ github.repository }}"
+          --target-url "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
