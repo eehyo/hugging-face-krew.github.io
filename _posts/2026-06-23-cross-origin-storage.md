@@ -245,3 +245,5 @@ COS API는 아직 어떤 브라우저에서도 기본적으로 구현되어 있�
 Transformers.js는 COS를 실험하는 데 있어 독립적이지 않습니다. [WebLLM](https://webllm.mlc.ai/)(옵트인, 자세한 내용은 [documentation](https://webllm.mlc.ai/docs/user/advanced_usage.html#using-cross-origin-storage-cache) 참조)과 [wllama](https://github.com/ngxson/wllama)(자동, 자세한 내용은 [PR](https://github.com/ngxson/wllama/pull/248) 참조) 역시 이 제안된 API에 대해 기대를 가지고 있습니다.
 
 크롬 팀은 브라우저에서 이를 네이티브로 구현하기 위해 노력하고 있습니다 [considering implementing the COS API](https://chromestatus.com/feature/5163371507875840). 초기 단계의 제안으로, API와 제안의 형태에 대한 피드백을 환영합니다. 이슈를 제기하려면 [Cross-Origin Storage repository](https://github.com/WICG/cross-origin-storage)를 이용하고, [express support](https://github.com/WICG/cross-origin-storage/labels/expression%20of%20support)를 확인하거나 PR을 여세요.
+
+<!-- TODO: temporary E2E failure sentinel; remove before merge. -->
