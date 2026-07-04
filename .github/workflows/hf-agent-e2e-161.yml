@@ -20,21 +20,21 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout workflow tools
-        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        uses: actions/checkout@93cb6efe18208431cddfb8368fd83d5badbf9bfd
         with:
           repository: Hugging-Face-KREW/hf-workflow
-          ref: f4966d52459246f05ef5644a57a4ce1b50dba0ee
+          ref: 4281fc77e83bdfd85dc8b35a3a6c125467faffda
           token: ${{ secrets.MY_GITHUB_TOKEN }}
           path: workflow
 
       - name: Checkout exact candidate
-        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        uses: actions/checkout@93cb6efe18208431cddfb8368fd83d5badbf9bfd
         with:
           ref: ${{ github.event.pull_request.head.sha }}
           path: target
 
       - name: Set up Python
-        uses: actions/setup-python@42375524e23c412d93fb67b49958b491fce71c38
+        uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1
         with:
           python-version: "3.11"
 
@@ -51,15 +51,6 @@ jobs:
           --report "${{ runner.temp }}/${{ matrix.skill }}.md"
           --result-json "${{ runner.temp }}/${{ matrix.skill }}.json"
 
-      - name: Upload review result
-        if: ${{ always() }}
-        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
-        with:
-          name: hf-agent-e2e-${{ matrix.skill }}-${{ github.event.pull_request.head.sha }}
-          path: |
-            ${{ runner.temp }}/${{ matrix.skill }}.md
-            ${{ runner.temp }}/${{ matrix.skill }}.json
-
   verifier:
     name: HF Agent E2E / Independent Verifier
     if: ${{ github.event.pull_request.number == 161 }}
@@ -69,21 +60,21 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout workflow tools
-        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        uses: actions/checkout@93cb6efe18208431cddfb8368fd83d5badbf9bfd
         with:
           repository: Hugging-Face-KREW/hf-workflow
-          ref: f4966d52459246f05ef5644a57a4ce1b50dba0ee
+          ref: 4281fc77e83bdfd85dc8b35a3a6c125467faffda
           token: ${{ secrets.MY_GITHUB_TOKEN }}
           path: workflow
 
       - name: Checkout exact candidate
-        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        uses: actions/checkout@93cb6efe18208431cddfb8368fd83d5badbf9bfd
         with:
           ref: ${{ github.event.pull_request.head.sha }}
           path: target
 
       - name: Set up Python
-        uses: actions/setup-python@42375524e23c412d93fb67b49958b491fce71c38
+        uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1
         with:
           python-version: "3.11"
 
@@ -113,10 +104,10 @@ jobs:
       count: ${{ steps.threads.outputs.count }}
     steps:
       - name: Checkout workflow tools
-        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        uses: actions/checkout@93cb6efe18208431cddfb8368fd83d5badbf9bfd
         with:
           repository: Hugging-Face-KREW/hf-workflow
-          ref: f4966d52459246f05ef5644a57a4ce1b50dba0ee
+          ref: 4281fc77e83bdfd85dc8b35a3a6c125467faffda
           token: ${{ secrets.MY_GITHUB_TOKEN }}
           path: workflow
 
@@ -139,24 +130,47 @@ jobs:
     if: ${{ always() && github.event.pull_request.number == 161 }}
     needs: [review, verifier, review_threads]
     permissions:
-      actions: read
       contents: read
       pull-requests: write
       statuses: write
     runs-on: ubuntu-latest
     steps:
       - name: Checkout workflow tools
-        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        uses: actions/checkout@93cb6efe18208431cddfb8368fd83d5badbf9bfd
         with:
           repository: Hugging-Face-KREW/hf-workflow
-          ref: f4966d52459246f05ef5644a57a4ce1b50dba0ee
+          ref: 4281fc77e83bdfd85dc8b35a3a6c125467faffda
           token: ${{ secrets.MY_GITHUB_TOKEN }}
           path: workflow
 
-      - name: Download review results
-        uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+      - name: Checkout exact candidate
+        uses: actions/checkout@93cb6efe18208431cddfb8368fd83d5badbf9bfd
         with:
-          path: results
+          ref: ${{ github.event.pull_request.head.sha }}
+          path: target
+
+      - name: Set up Python
+        uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1
+        with:
+          python-version: "3.11"
+
+      - name: Install report dependencies
+        run: python -m pip install pyyaml
+
+      - name: Generate comment reports
+        working-directory: workflow
+        run: |
+          mkdir -p ../results
+          set +e
+          for skill in seo quality; do
+            python scripts/hf_agent/run_skill_review.py \
+              --skill "$skill" \
+              --file "_posts/2026-06-30-eee-community-evals.md" \
+              --target-root ../target \
+              --report "../results/$skill.md" \
+              --result-json "../results/$skill.json"
+          done
+          exit 0
 
       - name: Publish marker report
         env:
