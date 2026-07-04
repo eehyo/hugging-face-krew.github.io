@@ -24,6 +24,7 @@ jobs:
         with:
           repository: Hugging-Face-KREW/hf-workflow
           ref: 0d20d3c63617feca6ba293419657636ed34f3bc1
+          token: ${{ secrets.MY_GITHUB_TOKEN }}
           path: workflow
 
       - name: Checkout exact candidate
@@ -72,6 +73,7 @@ jobs:
         with:
           repository: Hugging-Face-KREW/hf-workflow
           ref: 0d20d3c63617feca6ba293419657636ed34f3bc1
+          token: ${{ secrets.MY_GITHUB_TOKEN }}
           path: workflow
 
       - name: Checkout exact candidate
@@ -115,6 +117,7 @@ jobs:
         with:
           repository: Hugging-Face-KREW/hf-workflow
           ref: 0d20d3c63617feca6ba293419657636ed34f3bc1
+          token: ${{ secrets.MY_GITHUB_TOKEN }}
           path: workflow
 
       - name: Count unresolved review threads
@@ -147,6 +150,7 @@ jobs:
         with:
           repository: Hugging-Face-KREW/hf-workflow
           ref: 0d20d3c63617feca6ba293419657636ed34f3bc1
+          token: ${{ secrets.MY_GITHUB_TOKEN }}
           path: workflow
 
       - name: Download review results
