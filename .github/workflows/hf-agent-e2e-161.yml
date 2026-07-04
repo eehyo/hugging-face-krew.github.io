@@ -23,7 +23,7 @@ jobs:
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
         with:
           repository: Hugging-Face-KREW/hf-workflow
-          ref: 0d20d3c63617feca6ba293419657636ed34f3bc1
+          ref: f4966d52459246f05ef5644a57a4ce1b50dba0ee
           token: ${{ secrets.MY_GITHUB_TOKEN }}
           path: workflow
 
@@ -72,7 +72,7 @@ jobs:
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
         with:
           repository: Hugging-Face-KREW/hf-workflow
-          ref: 0d20d3c63617feca6ba293419657636ed34f3bc1
+          ref: f4966d52459246f05ef5644a57a4ce1b50dba0ee
           token: ${{ secrets.MY_GITHUB_TOKEN }}
           path: workflow
 
@@ -116,7 +116,7 @@ jobs:
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
         with:
           repository: Hugging-Face-KREW/hf-workflow
-          ref: 0d20d3c63617feca6ba293419657636ed34f3bc1
+          ref: f4966d52459246f05ef5644a57a4ce1b50dba0ee
           token: ${{ secrets.MY_GITHUB_TOKEN }}
           path: workflow
 
@@ -149,7 +149,7 @@ jobs:
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
         with:
           repository: Hugging-Face-KREW/hf-workflow
-          ref: 0d20d3c63617feca6ba293419657636ed34f3bc1
+          ref: f4966d52459246f05ef5644a57a4ce1b50dba0ee
           token: ${{ secrets.MY_GITHUB_TOKEN }}
           path: workflow
 
