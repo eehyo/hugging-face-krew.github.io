@@ -23,7 +23,7 @@ jobs:
         uses: actions/checkout@93cb6efe18208431cddfb8368fd83d5badbf9bfd
         with:
           repository: Hugging-Face-KREW/hf-workflow
-          ref: e9dee1f25dd211f45491ba41d7cab5c841b6dfce
+          ref: 49d2f5848ed616d3daddc17c71b626155537472c
           token: ${{ secrets.KREW_BOT_TOKEN }}
           path: workflow
 
@@ -63,7 +63,7 @@ jobs:
         uses: actions/checkout@93cb6efe18208431cddfb8368fd83d5badbf9bfd
         with:
           repository: Hugging-Face-KREW/hf-workflow
-          ref: e9dee1f25dd211f45491ba41d7cab5c841b6dfce
+          ref: 49d2f5848ed616d3daddc17c71b626155537472c
           token: ${{ secrets.KREW_BOT_TOKEN }}
           path: workflow
 
@@ -107,7 +107,7 @@ jobs:
         uses: actions/checkout@93cb6efe18208431cddfb8368fd83d5badbf9bfd
         with:
           repository: Hugging-Face-KREW/hf-workflow
-          ref: e9dee1f25dd211f45491ba41d7cab5c841b6dfce
+          ref: 49d2f5848ed616d3daddc17c71b626155537472c
           token: ${{ secrets.KREW_BOT_TOKEN }}
           path: workflow
 
@@ -199,7 +199,7 @@ jobs:
         uses: actions/checkout@93cb6efe18208431cddfb8368fd83d5badbf9bfd
         with:
           repository: Hugging-Face-KREW/hf-workflow
-          ref: e9dee1f25dd211f45491ba41d7cab5c841b6dfce
+          ref: 49d2f5848ed616d3daddc17c71b626155537472c
           token: ${{ secrets.KREW_BOT_TOKEN }}
           path: workflow
 
