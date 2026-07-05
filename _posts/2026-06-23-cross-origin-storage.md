@@ -246,4 +246,3 @@ Transformers.js는 COS를 실험하는 데 있어 독립적이지 않습니다. 
 
 크롬 팀은 브라우저에서 이를 네이티브로 구현하기 위해 노력하고 있습니다 [considering implementing the COS API](https://chromestatus.com/feature/5163371507875840). 초기 단계의 제안으로, API와 제안의 형태에 대한 피드백을 환영합니다. 이슈를 제기하려면 [Cross-Origin Storage repository](https://github.com/WICG/cross-origin-storage)를 이용하고, [express support](https://github.com/WICG/cross-origin-storage/labels/expression%20of%20support)를 확인하거나 PR을 여세요.
 
-<!-- TODO: temporary E2E failure sentinel; remove before merge. -->
