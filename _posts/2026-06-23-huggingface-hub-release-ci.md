@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "매주 AI, 오픈 도구, 그리고 루프 속 인간이 포함된 huggingface_hub 배포"
+title: "매주 AI, 오픈 도구, 그리고 휴먼 인 더 루프가 포함된 huggingface_hub 배포"
 author: dailybot
 categories: [Translation, HuggingFace]
 image: assets/images/blog/posts/2026-06-23-huggingface-hub-release-ci/thumbnail.png
@@ -31,11 +31,11 @@ Review instructions:
 - Preserve technical meaning, code blocks, links, headings, model names, API names, and product names.
 -->
 
-# 매주 AI, 오픈 도구, 그리고 루프 속 인간이 포함된 huggingface_hub 배포
+# 매주 AI, 오픈 도구, 그리고 휴먼 인 더 루프가 포함된 huggingface_hub 배포
 
 `huggingface_hub`은 허깅페이스 생태계의 기본인 파이썬 클라이언트입니다. `transformers`, `datasets`, `diffusers`, `sentence-transformers` 그리고 수십 개의 다른 라이브러리들이 Hub와 소통하기 위해 그것에 의존합니다. 우리가 매주 새로운 릴리스를 배포하지 않는 한 주는 `main`에 갇힌 수정사항과 기능의 한 주가 됩니다.
 
-오랜 기간 동안 우리는 4~6주마다 릴리스를 발표했습니다. 이제는 단일 GitHub Actions 워크플로우에서 매주 릴리스를 발표합니다. 오픈 소스 도구와 오픈-가중치 모델을 사용해 이를 구축했고, 판단이 중요한 한 곳에 사람을 루프에 두었습니다. 이 글의 어떤 내용도 공급업체 계약, 비공개 모델, 또는 자신이 실행할 수 없는 인프라를 요구하지 않습니다. 이는 시작부터의 설계 목표였으며, 다른 유지 관리자가 가져다 사용하고 조정할 수 있는 워크플로우를 원했기 때문입니다.
+오랜 기간 동안 우리는 4~6주마다 릴리스를 발표했습니다. 이제는 단일 GitHub Actions 워크플로우에서 매주 릴리스를 발표합니다. 오픈 소스 도구와 오픈-가중치 모델을 사용해 이를 구축했고, 판단이 중요한 한 곳에 휴먼 인 더 루프를 두었습니다. 이 글의 어떤 내용도 공급업체 계약, 비공개 모델, 또는 자신이 실행할 수 없는 인프라를 요구하지 않습니다. 이는 시작부터의 설계 목표였으며, 다른 유지 관리자가 가져다 사용하고 조정할 수 있는 워크플로우를 원했기 때문입니다.
 
 본 글이 끝나면 당신이 직접 만들어볼 수 있도록 필요한 모든 것이 제공될 것입니다.
 
@@ -113,7 +113,7 @@ on:
 - **Sync CLI docs.** 재생성된 `hf` CLI 스킬 문서를 포함하는 PR을 우리의 [skills](https://github.com/huggingface/skills) 저장소에 엽니다.
 - **Report to Slack.** 각 단계가 상태를 스레드 응답으로 게시하고, 최종 작업이 루트 메시지를 ✅ 또는 ❌로 업데이트합니다.
 
-남은 수동 단계는 초안 릴리스 노트를 검토하고 게시하는 것과 내부 Slack 메시지를 검토하고 게시하는 것입니다. 이 두 단계에서 우리가 루프에 인간의 개입이 필요합니다.
+남은 수동 단계는 초안 릴리스 노트를 검토하고 게시하는 것과 내부 Slack 메시지를 검토하고 게시하는 것입니다. 이 두 단계에는 휴먼 인 더 루프를 유지하려 합니다.
 
 ## 신뢰하되 검증하라: 사람의 개입 핵심 {#section-5}
 
