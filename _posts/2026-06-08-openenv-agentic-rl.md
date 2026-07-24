@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "오픈 소스 커뮤니티는 Agentic RL을 위한 OpenEnv를 뒷받침하고 있습니다"
+title: "오픈 소스 커뮤니티가 에이전틱 RL을 위한 OpenEnv에 힘을 싣다"
 author: dailybot
 categories: [Translation, HuggingFace]
 image: assets/images/blog/posts/2026-06-08-openenv-agentic-rl/thumbnail.png
@@ -45,7 +45,7 @@ Review instructions:
 - Preserve technical meaning, code blocks, links, headings, model names, API names, and product names.
 -->
 
-# 오픈 소스 커뮤니티는 Agentic RL을 위한 OpenEnv를 뒷받침하고 있습니다
+# 오픈 소스 커뮤니티가 에이전틱 RL을 위한 OpenEnv에 힘을 싣다
 
 ![Thumbnail for the blog post](https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/openenv-expansion/banner.png)
 
@@ -61,7 +61,7 @@ Claude Code, Codex, OpenClaw, Hermes와 같은 에이전트 하네스는 계속 
 
 우리는 이러한 이득을 오픈 소스 모델에서도 얻고자 합니다: 하네스를 효과적으로 사용하는 로컬 모델을 학습하고, 특정 작업에 맞게 모델을 특화시켜 계산 자원을 절약하는 것.
 
-## 왜 우리가 (더) 더 개방적이어야 하는가 {#section-2}
+## 왜 우리가 (더욱) 더 개방적이어야 하는가 {#section-2}
 
 프런티어 연구소들은 모델과 하네스가 대체로 손발이 맞게 함께 작동하도록 학습합니다. 모델은 하네스를 사용하도록 학습되며 그 특성에 맞게 최적화됩니다. 모델은 이 하네스들 너머로 다소 일반화될 수 있지만, 학습의 효율성을 능가하는 것은 아무것도 없습니다.
 
@@ -89,7 +89,7 @@ Claude Code, Codex, OpenClaw, Hermes와 같은 에이전트 하네스는 계속 
 
 향후 몇 달 동안 OpenEnv를 빠르게 성장하는 프로젝트에서 신뢰할 수 있는 표준으로 바꾸는 데 집중할 것입니다:
 
-1. 데이터셋을 통한 태스크셋: 환경 태스크를 허깅페이스 데이터셋과 연결해 환경과 벤치마크가 깔끔하게 구성되도록 합니다 ([RFC 006](https://github.com/huggingface/OpenEnv/pull/731)).
+1. 데이터셋을 통한 태스크셋: 환경 태스크를 Hugging Face 데이터셋과 연결해 환경과 벤치마크가 깔끔하게 구성되도록 합니다 ([RFC 006](https://github.com/huggingface/OpenEnv/pull/731)).
 2. 외부 보상: 이미 사용 중인 라이브러리에서 보상을 정의하도록 허용하고, OpenEnv가 배포 계층 역할을 합니다 ([RFC 007](https://github.com/huggingface/OpenEnv/pull/727)).
 3. 지속적인 하네스 통합: 에이전트형 하네스에 대한 일류 지원.
 4. 엔드투엔드 예제: TRL, Unsloth 및 그 이상에서의 전체 학습 및 평가 워크스루.
