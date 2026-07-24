@@ -3,7 +3,7 @@ layout: post
 title: "GitHub CI를 허깅페이스 Jobs로 마이그레이션"
 author: dailybot
 categories: [Translation, HuggingFace]
-thumbnail: /blog/assets/github-ci-hf-jobs/thumbnail.gif
+image: assets/images/blog/posts/2026-06-09-github-ci-hf-jobs/thumbnail.gif
 authors:
   - user: abidlabs
 slug: "github-ci-hf-jobs"
@@ -15,13 +15,12 @@ translation_status: "draft"
 translator: "openai"
 ---
 
-> Source: https://huggingface.co/blog/github-ci-hf-jobs
-
 * TOC
 {:toc}
 <!--toc-->
-
 _이 글은 Hugging Face 블로그의 [Migrating Your GitHub CI to Hugging Face Jobs](https://huggingface.co/blog/github-ci-hf-jobs)를 한국어로 번역한 글입니다._
+
+<!-- Source: https://huggingface.co/blog/github-ci-hf-jobs -->
 
 ---
 
