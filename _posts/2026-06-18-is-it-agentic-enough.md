@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "충분히 에이전트적인가요? 당신의 도구로 오픈 모델 벤치마킹"
+title: "충분히 에이전트적인가요? 자체 도구로 오픈 모델 벤치마킹하기"
 author: dailybot
 categories: [Translation, HuggingFace]
 image: assets/images/blog/posts/2026-06-18-is-it-agentic-enough/thumbnail.png
@@ -32,7 +32,7 @@ Review instructions:
 - Preserve technical meaning, code blocks, links, headings, model names, API names, and product names.
 -->
 
-# 충분히 에이전트적인가요? 당신의 도구로 오픈 모델 벤치마킹
+# 충분히 에이전트적인가요? 자체 도구로 오픈 모델 벤치마킹하기
 
 ![Benchmarking transformers revisions across different metrics](https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/blog/is-it-agentic-enough/img_6.png)
 
