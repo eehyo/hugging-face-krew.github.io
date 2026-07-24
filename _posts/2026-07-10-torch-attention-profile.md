@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "파이토치의 프로파일링(3부): 어텐션이 전부다"
-author: dailybot
+author: KREW
 categories: [Translation, HuggingFace]
 image: assets/images/blog/posts/2026-07-10-torch-attention-profile/thumbnail.png
 authors:

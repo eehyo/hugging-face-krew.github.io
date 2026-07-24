@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "LeRobot v0.6.0: 상상하고, 평가하고, 개선하기"
-author: dailybot
+author: KREW
 categories: [Translation, HuggingFace]
 image: assets/images/blog/posts/2026-07-07-lerobot-release-v060/thumbnail.png
 authors:

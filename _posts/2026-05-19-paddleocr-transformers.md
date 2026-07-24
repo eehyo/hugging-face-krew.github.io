@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "PaddleOCR 3.5: Transformers 백엔드를 활용한 OCR 및 문서 파싱 작업 실행"
-author: dailybot
+author: KREW
 categories: [Translation, HuggingFace]
 image: assets/images/blog/posts/2026-05-19-paddleocr-transformers/thumbnail.jpeg
 slug: "paddleocr-transformers"

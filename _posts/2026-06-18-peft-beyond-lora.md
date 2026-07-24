@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Beyond LoRA: 가장 인기 있는 미세조정 기법을 이길 수 있을까?"
-author: dailybot
+author: KREW
 categories: [Translation, HuggingFace]
 image: assets/images/blog/posts/2026-06-18-peft-beyond-lora/thumbnail.png
 authors:

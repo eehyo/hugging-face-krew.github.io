@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "충분히 에이전트적인가요? 자체 도구로 오픈 모델 벤치마킹하기"
-author: dailybot
+author: KREW
 categories: [Translation, HuggingFace]
 image: assets/images/blog/posts/2026-06-18-is-it-agentic-enough/thumbnail.png
 authors:

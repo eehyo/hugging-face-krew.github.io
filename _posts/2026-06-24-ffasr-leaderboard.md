@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "FFASR Leaderboard 소개: 현실 세계에서의 ASR 벤치마크"
-author: dailybot
+author: KREW
 categories: [Translation, HuggingFace]
 image: assets/images/blog/posts/2026-06-24-ffasr-leaderboard/thumbnail.png
 authors:

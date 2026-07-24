@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "매주 AI, 오픈 도구, 그리고 휴먼 인 더 루프가 포함된 huggingface_hub 배포"
-author: dailybot
+author: KREW
 categories: [Translation, HuggingFace]
 image: assets/images/blog/posts/2026-06-23-huggingface-hub-release-ci/thumbnail.png
 authors:

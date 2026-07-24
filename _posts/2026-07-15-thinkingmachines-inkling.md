@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Thinking Machines의 Inkling에 오신 것을 환영합니다"
-author: dailybot
+author: KREW
 categories: [Translation, HuggingFace]
 image: assets/images/blog/posts/2026-07-15-thinkingmachines-inkling/thumbnail.png
 authors:

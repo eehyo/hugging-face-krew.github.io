@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "오픈 소스 커뮤니티가 에이전틱 RL을 위한 OpenEnv에 힘을 싣다"
-author: dailybot
+author: KREW
 categories: [Translation, HuggingFace]
 image: assets/images/blog/posts/2026-06-08-openenv-agentic-rl/thumbnail.png
 authors:

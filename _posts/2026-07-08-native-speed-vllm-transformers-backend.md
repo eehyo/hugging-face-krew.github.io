@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "네이티브-스피드 vLLM transformers 모델링 백엔드"
-author: dailybot
+author: KREW
 categories: [Translation, HuggingFace]
 image: assets/images/blog/posts/2026-07-08-native-speed-vllm-transformers-backend/thumbnail.png
 authors:

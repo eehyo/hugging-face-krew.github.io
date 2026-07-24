@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Hugging Face 모델 페이지에서 Every Eval Ever 결과 보기"
-author: dailybot
+author: KREW
 categories: [Translation, HuggingFace]
 image: assets/images/blog/posts/2026-06-30-eee-community-evals/thumbnail.png
 authors:
