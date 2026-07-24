@@ -3,6 +3,7 @@ layout: post
 title: "PaddleOCR 3.5: Transformers 백엔드를 활용한 OCR 및 문서 파싱 작업 실행"
 author: dailybot
 categories: [Translation, HuggingFace]
+image: assets/images/blog/posts/2026-05-19-paddleocr-transformers/thumbnail.jpeg
 slug: "paddleocr-transformers"
 source_url: "https://huggingface.co/blog/PaddlePaddle/paddleocr-transformers"
 source_published_date: "2026-05-18"
@@ -12,13 +13,12 @@ translation_status: "draft"
 translator: "openai"
 ---
 
-> Source: https://huggingface.co/blog/PaddlePaddle/paddleocr-transformers
-
 * TOC
 {:toc}
 <!--toc-->
-
 _이 글은 Hugging Face 블로그의 [PaddleOCR 3.5: Running OCR and Document Parsing Tasks with a Transformers Backend](https://huggingface.co/blog/PaddlePaddle/paddleocr-transformers)를 한국어로 번역한 글입니다._
+
+<!-- Source: https://huggingface.co/blog/PaddlePaddle/paddleocr-transformers -->
 
 ---
 
