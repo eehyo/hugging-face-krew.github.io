@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Reachy Mini를 로컬에서 완전히 실행하기"
-author: dailybot
+author: KREW
 categories: [Translation, HuggingFace]
 thumbnail: /blog/assets/local-reachy-mini-conversation/thumbnail.png
 image: assets/images/blog/posts/2026-05-27-local-reachy-mini-conversation/thumbnail.png

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "PyTorch에서의 프로파일링(Part 1): torch.profiler에 대한 초보자 가이드"
-author: dailybot
+author: KREW
 categories: [Translation, HuggingFace]
 image: assets/images/blog/posts/2026-05-29-torch-profiler/thumbnail.png
 authors:

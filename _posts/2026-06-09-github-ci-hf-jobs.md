@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "GitHub CI를 Hugging Face Jobs로 마이그레이션"
-author: dailybot
+author: KREW
 categories: [Translation, HuggingFace]
 image: assets/images/blog/posts/2026-06-09-github-ci-hf-jobs/thumbnail.gif
 authors:

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "에이전트 기반 리소스 탐색: 에이전트에게 도구·스킬·다른 에이전트 검색을 맡기다"
-author: dailybot
+author: KREW
 categories: [Translation, HuggingFace]
 image: assets/images/blog/posts/2026-06-17-agentic-resource-discovery-launch/thumbnail.png
 authors:

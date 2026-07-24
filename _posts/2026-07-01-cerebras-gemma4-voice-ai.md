@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Hugging Face와 Cerebras가 Gemma 4를 실시간 음성 AI로 선보입니다"
-author: dailybot
+author: KREW
 categories: [Translation, HuggingFace]
 image: assets/images/blog/posts/2026-07-01-cerebras-gemma4-voice-ai/thumbnail.png
 authors:
