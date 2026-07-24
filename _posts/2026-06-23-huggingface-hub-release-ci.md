@@ -3,7 +3,7 @@ layout: post
 title: "매주 AI, 오픈 도구, 그리고 루프 속 인간이 포함된 huggingface_hub 배포"
 author: dailybot
 categories: [Translation, HuggingFace]
-thumbnail: /blog/assets/huggingface-hub-release-ci/thumbnail.png
+image: assets/images/blog/posts/2026-06-23-huggingface-hub-release-ci/thumbnail.png
 authors:
   - user: Wauplin
   - user: celinah
@@ -16,13 +16,12 @@ translation_status: "draft"
 translator: "openai"
 ---
 
-> Source: https://huggingface.co/blog/huggingface-hub-release-ci
-
 * TOC
 {:toc}
 <!--toc-->
-
 _이 글은 Hugging Face 블로그의 [Shipping huggingface_hub every week with AI, open tools, and a human in the loop](https://huggingface.co/blog/huggingface-hub-release-ci)를 한국어로 번역한 글입니다._
+
+<!-- Source: https://huggingface.co/blog/huggingface-hub-release-ci -->
 
 ---
 
