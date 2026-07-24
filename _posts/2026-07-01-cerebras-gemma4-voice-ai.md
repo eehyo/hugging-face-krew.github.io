@@ -21,7 +21,6 @@ translator: "openai"
 * TOC
 {:toc}
 <!--toc-->
-
 _이 글은 Hugging Face 블로그의 [Hugging Face and Cerebras bring Gemma 4 to real-time voice AI](https://huggingface.co/blog/cerebras-gemma4-voice-ai)를 한국어로 번역한 글입니다._
 
 <!-- Source: https://huggingface.co/blog/cerebras-gemma4-voice-ai -->
