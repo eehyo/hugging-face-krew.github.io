@@ -3,7 +3,7 @@ layout: post
 title: "Transformers.js에서 제안된 Cross-Origin Storage API 실험하기"
 author: dailybot
 categories: [Translation, HuggingFace]
-image: /assets/images/blog/posts/2026-06-23-cross-origin-storage/thumbnail.jpg
+image: assets/images/blog/posts/2026-06-23-cross-origin-storage/thumbnail.jpg
 authors:
   - user: tomayac
 slug: "cross-origin-storage"
