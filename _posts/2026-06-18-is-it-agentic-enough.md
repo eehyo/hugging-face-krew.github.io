@@ -3,7 +3,7 @@ layout: post
 title: "충분히 에이전트적인가요? 당신의 도구로 오픈 모델 벤치마킹"
 author: dailybot
 categories: [Translation, HuggingFace]
-thumbnail: /blog/assets/is-it-agentic-enough/thumbnail.png
+image: assets/images/blog/posts/2026-06-18-is-it-agentic-enough/thumbnail.png
 authors:
   - user: lysandre
   - user: SaylorTwift
@@ -17,13 +17,12 @@ translation_status: "draft"
 translator: "openai"
 ---
 
-> Source: https://huggingface.co/blog/is-it-agentic-enough
-
 * TOC
 {:toc}
 <!--toc-->
-
 _이 글은 Hugging Face 블로그의 [Is it agentic enough? Benchmarking open models on your own tooling](https://huggingface.co/blog/is-it-agentic-enough)를 한국어로 번역한 글입니다._
+
+<!-- Source: https://huggingface.co/blog/is-it-agentic-enough -->
 
 ---
 
