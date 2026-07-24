@@ -3,7 +3,7 @@ layout: post
 title: "에이전트 주도 자원 발견: 에이전트가 도구, 기술 및 다른 에이전트를 검색하도록."
 author: dailybot
 categories: [Translation, HuggingFace]
-thumbnail: /blog/assets/agentic-resource-discovery-launch/thumbnail.png
+image: assets/images/blog/posts/2026-06-17-agentic-resource-discovery-launch/thumbnail.png
 authors:
   - user: burtenshaw
   - user: evalstate
@@ -16,13 +16,12 @@ translation_status: "draft"
 translator: "openai"
 ---
 
-> Source: https://huggingface.co/blog/agentic-resource-discovery-launch
-
 * TOC
 {:toc}
 <!--toc-->
-
 _이 글은 Hugging Face 블로그의 [Agentic Resource Discovery: Let agents search](https://huggingface.co/blog/agentic-resource-discovery-launch)를 한국어로 번역한 글입니다._
+
+<!-- Source: https://huggingface.co/blog/agentic-resource-discovery-launch -->
 
 ---
 
