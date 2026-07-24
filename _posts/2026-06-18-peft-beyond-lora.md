@@ -3,7 +3,7 @@ layout: post
 title: "Beyond LoRA: 가장 인기 있는 미세조정 기법을 이길 수 있을까?"
 author: dailybot
 categories: [Translation, HuggingFace]
-thumbnail: /blog/assets/peft-beyond-lora/thumbnail.png
+image: assets/images/blog/posts/2026-06-18-peft-beyond-lora/thumbnail.png
 authors:
   - user: BenjaminB
   - user: sayakpaul
@@ -18,13 +18,12 @@ translation_status: "draft"
 translator: "openai"
 ---
 
-> Source: https://huggingface.co/blog/peft-beyond-lora
-
 * TOC
 {:toc}
 <!--toc-->
-
 _이 글은 Hugging Face 블로그의 [Beyond LoRA: Can you beat the most popular fine-tuning technique?](https://huggingface.co/blog/peft-beyond-lora)를 한국어로 번역한 글입니다._
+
+<!-- Source: https://huggingface.co/blog/peft-beyond-lora -->
 
 ---
 
@@ -80,7 +79,7 @@ LoRA 외의 미세조정 기법을 연구하는 논문이 수십 편 있습니�
 
 전반적으로, 논문 결과만으로 어떤 PEFT 기법이 당신에게 가장 잘 맞는지 판단하기는 어렵습니다. 따라서 기본값인 LoRA를 그냥 선택하고 싶은 유혹에 빠질 수 있습니다.
 
-# `PEFT`에서 벤치마킹에 어떻게 접근합니다
+# PEFT에서 벤치마킹에 어떻게 접근합니다
 
 허깅페이스에서 사용자가 어떤 PEFT 기법을 사용할지에 대해 정보에 입각한 결정을 내릴 수 있도록 어떻게 도울 수 있을지 고민했습니다. `PEFT` 라이브러리를 통해 이미 많은 PEFT 기법을 구현하고 동일한 API로 노출하는 패키지를 제공하고 있습니다. 다음 단계는 논의된 이슈에 대해 더 많은 정보를 제공하는 벤치마크를 제공하는 것입니다.
 
