@@ -3,7 +3,7 @@ layout: post
 title: "허깅페이스 모델 페이지에서의 모든 Eval Ever 결과"
 author: dailybot
 categories: [Translation, HuggingFace]
-thumbnail: /blog/assets/eee_commevals/eee_commevals_banner.png
+image: assets/images/blog/posts/2026-06-30-eee-community-evals/thumbnail.png
 authors:
   - user: deepmage121
 slug: "eee-community-evals"
@@ -15,13 +15,12 @@ translation_status: "draft"
 translator: "openai"
 ---
 
-> Source: https://huggingface.co/blog/eee-community-evals
-
 * TOC
 {:toc}
 <!--toc-->
-
 _이 글은 Hugging Face 블로그의 [Featuring Every Eval Ever Results on Hugging Face Model Pages](https://huggingface.co/blog/eee-community-evals)를 한국어로 번역한 글입니다._
+
+<!-- Source: https://huggingface.co/blog/eee-community-evals -->
 
 ---
 
