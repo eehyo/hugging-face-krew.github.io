@@ -3,7 +3,7 @@ layout: post
 title: "PyTorch에서의 프로파일링(Part 1): torch.profiler에 대한 초보자 가이드"
 author: dailybot
 categories: [Translation, HuggingFace]
-thumbnail: /blog/assets/torch-profiler/thumbnail.png
+image: assets/images/blog/posts/2026-05-29-torch-profiler/thumbnail.png
 authors:
   - user: ariG23498
   - user: sayakpaul
@@ -19,13 +19,12 @@ translation_status: "draft"
 translator: "openai"
 ---
 
-> Source: https://huggingface.co/blog/torch-profiler
-
 * TOC
 {:toc}
 <!--toc-->
-
 _이 글은 Hugging Face 블로그의 [Profiling in PyTorch (Part 1): A Beginner's Guide to torch.profiler](https://huggingface.co/blog/torch-profiler)를 한국어로 번역한 글입니다._
+
+<!-- Source: https://huggingface.co/blog/torch-profiler -->
 
 ---
 
