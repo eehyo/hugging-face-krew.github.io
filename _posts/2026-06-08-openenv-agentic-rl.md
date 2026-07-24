@@ -3,7 +3,7 @@ layout: post
 title: "오픈 소스 커뮤니티는 Agentic RL을 위한 OpenEnv를 뒷받침하고 있습니다"
 author: dailybot
 categories: [Translation, HuggingFace]
-thumbnail: /blog/assets/openenv/thumbnail_expansion.png
+image: assets/images/blog/posts/2026-06-08-openenv-agentic-rl/thumbnail.png
 authors:
   - user: burtenshaw
   - user: spisakjo
@@ -30,13 +30,12 @@ translation_status: "draft"
 translator: "openai"
 ---
 
-> Source: https://huggingface.co/blog/openenv-agentic-rl
-
 * TOC
 {:toc}
 <!--toc-->
-
 _이 글은 Hugging Face 블로그의 [The Open Source Community is backing OpenEnv for Agentic RL](https://huggingface.co/blog/openenv-agentic-rl)를 한국어로 번역한 글입니다._
+
+<!-- Source: https://huggingface.co/blog/openenv-agentic-rl -->
 
 ---
 
