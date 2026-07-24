@@ -3,7 +3,7 @@ layout: post
 title: "Transformers.js에서 제안된 Cross-Origin Storage API 실험하기"
 author: dailybot
 categories: [Translation, HuggingFace]
-thumbnail: /blog/assets/cross-origin-storage/thumbnail.jpg
+image: /assets/images/blog/posts/2026-06-23-cross-origin-storage/thumbnail.jpg
 authors:
   - user: tomayac
 slug: "cross-origin-storage"
@@ -15,13 +15,13 @@ translation_status: "draft"
 translator: "openai"
 ---
 
-> Source: https://huggingface.co/blog/cross-origin-storage
-
 * TOC
 {:toc}
 <!--toc-->
-
 _이 글은 Hugging Face 블로그의 [Experimenting with the proposed Cross-Origin Storage API in Transformers.js](https://huggingface.co/blog/cross-origin-storage)를 한국어로 번역한 글입니다._
+
+
+<!-- Source: https://huggingface.co/blog/cross-origin-storage -->
 
 ---
 
