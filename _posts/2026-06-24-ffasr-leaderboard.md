@@ -3,7 +3,7 @@ layout: post
 title: "FFASR Leaderboard 소개: 현실 세계에서의 ASR 벤치마크"
 author: dailybot
 categories: [Translation, HuggingFace]
-thumbnail: /blog/assets/ffasr-leaderboard/thumbnail.png
+image: assets/images/blog/posts/2026-06-24-ffasr-leaderboard/thumbnail.png
 authors:
   - user: daniel-treble
 slug: "ffasr-leaderboard"
@@ -15,13 +15,12 @@ translation_status: "draft"
 translator: "openai"
 ---
 
-> Source: https://huggingface.co/blog/ffasr-leaderboard
-
 * TOC
 {:toc}
 <!--toc-->
-
 _이 글은 Hugging Face 블로그의 [Introducing the FFASR Leaderboard: Benchmarking ASR in the Real World](https://huggingface.co/blog/ffasr-leaderboard)를 한국어로 번역한 글입니다._
+
+<!-- Source: https://huggingface.co/blog/ffasr-leaderboard -->
 
 ---
 
